@@ -13,7 +13,7 @@
 + (NSData *)gzipData:(NSData *)pUncompressedData
 {
 	if (!pUncompressedData || [pUncompressedData length] == 0) {
-		OKAY_LOG(@"%s: Error: Can't compress an empty or nil NSData object",__func__);
+		NSLog(@"%s: Error: Can't compress an empty or nil NSData object",__func__);
 		return nil;
 	}
 	
@@ -42,7 +42,7 @@
 				errorMsg = @"Unknown error code.";
 				break;
 		}
-		OKAY_LOG(@"%s:deflateInit2() Error: \"%@\" Message: \"%s\"",__func__,errorMsg,zlibStreamStruct.msg);
+		NSLog(@"%s:deflateInit2() Error: \"%@\" Message: \"%s\"",__func__,errorMsg,zlibStreamStruct.msg);
 		return nil;
 	}
 	
@@ -89,7 +89,7 @@
 	
 	deflateEnd(&zlibStreamStruct);
 	[compressedData setLength:zlibStreamStruct.total_out];
-	OKAY_LOG(@"%s: Compressed file from %d B to %d B", __func__, [pUncompressedData length], [compressedData length]);
+	NSLog(@"%s: Compressed file from %d B to %d B", __func__, [pUncompressedData length], [compressedData length]);
 	return compressedData;
 }
 

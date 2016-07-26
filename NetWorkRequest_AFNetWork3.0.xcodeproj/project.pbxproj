@@ -52,6 +52,21 @@
 		667321F11D477152007BE8DE /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 667321EF1D477152007BE8DE /* NSObject+Common.m */; };
 		667321F41D4771B4007BE8DE /* DeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 667321F31D4771B4007BE8DE /* DeviceTool.m */; };
 		667321F51D4771B4007BE8DE /* DeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 667321F31D4771B4007BE8DE /* DeviceTool.m */; };
+		667321F81D477277007BE8DE /* LFCGzipUtillity.m in Sources */ = {isa = PBXBuildFile; fileRef = 667321F71D477277007BE8DE /* LFCGzipUtillity.m */; };
+		667321F91D477277007BE8DE /* LFCGzipUtillity.m in Sources */ = {isa = PBXBuildFile; fileRef = 667321F71D477277007BE8DE /* LFCGzipUtillity.m */; };
+		667321FC1D477348007BE8DE /* ReplaceUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 667321FB1D477348007BE8DE /* ReplaceUnicode.m */; };
+		667321FD1D477348007BE8DE /* ReplaceUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 667321FB1D477348007BE8DE /* ReplaceUnicode.m */; };
+		667322001D477370007BE8DE /* OkayLogTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 667321FF1D477370007BE8DE /* OkayLogTool.m */; };
+		667322011D477370007BE8DE /* OkayLogTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 667321FF1D477370007BE8DE /* OkayLogTool.m */; };
+		667322041D4773B2007BE8DE /* DictTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 667322031D4773B2007BE8DE /* DictTool.m */; };
+		667322051D4773B2007BE8DE /* DictTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 667322031D4773B2007BE8DE /* DictTool.m */; };
+		667322081D477420007BE8DE /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 667322071D477420007BE8DE /* SSKeychain.m */; };
+		667322091D477420007BE8DE /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 667322071D477420007BE8DE /* SSKeychain.m */; };
+		6673220B1D477518007BE8DE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673220A1D477518007BE8DE /* CFNetwork.framework */; };
+		6673220D1D477524007BE8DE /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673220C1D477524007BE8DE /* libresolv.tbd */; };
+		6673220F1D477531007BE8DE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673220E1D477531007BE8DE /* CoreMedia.framework */; };
+		667322111D47753D007BE8DE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667322101D47753D007BE8DE /* AVFoundation.framework */; };
+		667322131D47754A007BE8DE /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 667322121D47754A007BE8DE /* libz.1.2.5.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +134,21 @@
 		667321EF1D477152007BE8DE /* NSObject+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Common.m"; sourceTree = "<group>"; };
 		667321F21D4771B4007BE8DE /* DeviceTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTool.h; sourceTree = "<group>"; };
 		667321F31D4771B4007BE8DE /* DeviceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTool.m; sourceTree = "<group>"; };
+		667321F61D477277007BE8DE /* LFCGzipUtillity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtillity.h; sourceTree = "<group>"; };
+		667321F71D477277007BE8DE /* LFCGzipUtillity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtillity.m; sourceTree = "<group>"; };
+		667321FA1D477348007BE8DE /* ReplaceUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceUnicode.h; sourceTree = "<group>"; };
+		667321FB1D477348007BE8DE /* ReplaceUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceUnicode.m; sourceTree = "<group>"; };
+		667321FE1D477370007BE8DE /* OkayLogTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkayLogTool.h; sourceTree = "<group>"; };
+		667321FF1D477370007BE8DE /* OkayLogTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OkayLogTool.m; sourceTree = "<group>"; };
+		667322021D4773B2007BE8DE /* DictTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictTool.h; sourceTree = "<group>"; };
+		667322031D4773B2007BE8DE /* DictTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictTool.m; sourceTree = "<group>"; };
+		667322061D477420007BE8DE /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		667322071D477420007BE8DE /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		6673220A1D477518007BE8DE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6673220C1D477524007BE8DE /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		6673220E1D477531007BE8DE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		667322101D47753D007BE8DE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		667322121D47754A007BE8DE /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +156,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667322131D47754A007BE8DE /* libz.1.2.5.tbd in Frameworks */,
+				667322111D47753D007BE8DE /* AVFoundation.framework in Frameworks */,
+				6673220F1D477531007BE8DE /* CoreMedia.framework in Frameworks */,
+				6673220D1D477524007BE8DE /* libresolv.tbd in Frameworks */,
+				6673220B1D477518007BE8DE /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +177,11 @@
 		667321721D4770D5007BE8DE = {
 			isa = PBXGroup;
 			children = (
+				667322121D47754A007BE8DE /* libz.1.2.5.tbd */,
+				667322101D47753D007BE8DE /* AVFoundation.framework */,
+				6673220E1D477531007BE8DE /* CoreMedia.framework */,
+				6673220C1D477524007BE8DE /* libresolv.tbd */,
+				6673220A1D477518007BE8DE /* CFNetwork.framework */,
 				6673217D1D4770D5007BE8DE /* NetWorkRequest_AFNetWork3.0 */,
 				667321971D4770D5007BE8DE /* NetWorkRequest_AFNetWork3.0UITests */,
 				6673217C1D4770D5007BE8DE /* Products */,
@@ -194,6 +234,16 @@
 		667321A31D4770F5007BE8DE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				667322061D477420007BE8DE /* SSKeychain.h */,
+				667322071D477420007BE8DE /* SSKeychain.m */,
+				667322021D4773B2007BE8DE /* DictTool.h */,
+				667322031D4773B2007BE8DE /* DictTool.m */,
+				667321FE1D477370007BE8DE /* OkayLogTool.h */,
+				667321FF1D477370007BE8DE /* OkayLogTool.m */,
+				667321FA1D477348007BE8DE /* ReplaceUnicode.h */,
+				667321FB1D477348007BE8DE /* ReplaceUnicode.m */,
+				667321F61D477277007BE8DE /* LFCGzipUtillity.h */,
+				667321F71D477277007BE8DE /* LFCGzipUtillity.m */,
 				667321F21D4771B4007BE8DE /* DeviceTool.h */,
 				667321F31D4771B4007BE8DE /* DeviceTool.m */,
 				667321EE1D477152007BE8DE /* NSObject+Common.h */,
@@ -371,19 +421,24 @@
 				667321E81D4770F5007BE8DE /* UIProgressView+AFNetworking.m in Sources */,
 				667321DE1D4770F5007BE8DE /* AFImageDownloader.m in Sources */,
 				667321DC1D4770F5007BE8DE /* AFAutoPurgingImageCache.m in Sources */,
+				667321F81D477277007BE8DE /* LFCGzipUtillity.m in Sources */,
 				667321DA1D4770F5007BE8DE /* PublicParameters.m in Sources */,
 				667321F41D4771B4007BE8DE /* DeviceTool.m in Sources */,
+				667322041D4773B2007BE8DE /* DictTool.m in Sources */,
 				667321E41D4770F5007BE8DE /* UIButton+AFNetworking.m in Sources */,
 				667321E21D4770F5007BE8DE /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				667321831D4770D5007BE8DE /* AppDelegate.m in Sources */,
 				667321EA1D4770F5007BE8DE /* UIRefreshControl+AFNetworking.m in Sources */,
+				667322001D477370007BE8DE /* OkayLogTool.m in Sources */,
 				667321EC1D4770F5007BE8DE /* UIWebView+AFNetworking.m in Sources */,
 				667321CE1D4770F5007BE8DE /* AFHTTPSessionManager.m in Sources */,
 				667321D81D4770F5007BE8DE /* AFURLSessionManager.m in Sources */,
 				667321CC1D4770F5007BE8DE /* AFNetAPIClient.m in Sources */,
 				667321D01D4770F5007BE8DE /* AFNetworkReachabilityManager.m in Sources */,
 				667321801D4770D5007BE8DE /* main.m in Sources */,
+				667322081D477420007BE8DE /* SSKeychain.m in Sources */,
 				667321E01D4770F5007BE8DE /* AFNetworkActivityIndicatorManager.m in Sources */,
+				667321FC1D477348007BE8DE /* ReplaceUnicode.m in Sources */,
 				667321D41D4770F5007BE8DE /* AFURLRequestSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,11 +447,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667322011D477370007BE8DE /* OkayLogTool.m in Sources */,
 				667321E91D4770F5007BE8DE /* UIProgressView+AFNetworking.m in Sources */,
 				667321F11D477152007BE8DE /* NSObject+Common.m in Sources */,
+				667321FD1D477348007BE8DE /* ReplaceUnicode.m in Sources */,
+				667322091D477420007BE8DE /* SSKeychain.m in Sources */,
 				667321DB1D4770F5007BE8DE /* PublicParameters.m in Sources */,
 				667321ED1D4770F5007BE8DE /* UIWebView+AFNetworking.m in Sources */,
 				667321E71D4770F5007BE8DE /* UIImageView+AFNetworking.m in Sources */,
+				667322051D4773B2007BE8DE /* DictTool.m in Sources */,
 				667321CF1D4770F5007BE8DE /* AFHTTPSessionManager.m in Sources */,
 				667321E51D4770F5007BE8DE /* UIButton+AFNetworking.m in Sources */,
 				667321D91D4770F5007BE8DE /* AFURLSessionManager.m in Sources */,
@@ -405,6 +464,7 @@
 				667321CD1D4770F5007BE8DE /* AFNetAPIClient.m in Sources */,
 				667321DD1D4770F5007BE8DE /* AFAutoPurgingImageCache.m in Sources */,
 				667321D51D4770F5007BE8DE /* AFURLRequestSerialization.m in Sources */,
+				667321F91D477277007BE8DE /* LFCGzipUtillity.m in Sources */,
 				667321D11D4770F5007BE8DE /* AFNetworkReachabilityManager.m in Sources */,
 				667321E11D4770F5007BE8DE /* AFNetworkActivityIndicatorManager.m in Sources */,
 				667321D71D4770F5007BE8DE /* AFURLResponseSerialization.m in Sources */,

@@ -15,6 +15,10 @@
 static NSString *kSSToolkitTestsServiceName = @"com.okay";
 static NSString *kSSToolkitTestsAccountName = @"okjiazhang";
 
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
 @implementation DeviceTool
 
 + (int)getNetworkStatus

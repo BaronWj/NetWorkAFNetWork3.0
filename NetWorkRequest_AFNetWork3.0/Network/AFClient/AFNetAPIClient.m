@@ -9,10 +9,12 @@
 #import "AFNetAPIClient.h"
 #import "NSObject+Common.h"
 //#import "ApiUrl.h"
-//#import "ReplaceUnicode.h"
+#import "ReplaceUnicode.h"
 #import "DeviceTool.h"
-#import "appConfigMacro.h"
+//#import "appConfigMacro.h"
 #import "LFCGzipUtillity.h"
+#define BASE_URL_VALUE  @"http://baidu.com"
+
 @interface AFNetAPIClient ()
 
 @property (nonatomic,copy)NSString * url;
@@ -44,22 +46,22 @@
         switch (status) {
             case AFNetworkReachabilityStatusUnknown:
             {
-                OKAY_LOG(@"未知信号");
+                NSLog(@"未知信号");
             }
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
             {
-                OKAY_LOG(@"手机信号");
+                NSLog(@"手机信号");
             }
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
             {
-                OKAY_LOG(@"wiFi信号");
+                NSLog(@"wiFi信号");
             }
                 break;
             case AFNetworkReachabilityStatusNotReachable:
             {
-                OKAY_LOG(@"没有信号");
+                NSLog(@"没有信号");
             }
                 break;
 
@@ -88,7 +90,7 @@
 //    self.wRequestType = Get;
 //    self.securityPolicy.allowInvalidCertificates = YES;
     //self.securityPolicy = [self customSecurityPolicy];
-    OKAY_LOG(@"initdayintou:%@",self.requestSerializer);
+    NSLog(@"initdayintou:%@",self.requestSerializer);
     return self;
 }
 
@@ -161,9 +163,9 @@
 //                progress(downloadProgress.fractionCompleted)
                 Progress(downloadProgress);//downloadProgress.fractionCompleted
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                OKAY_LOG(@"task:%lu",(unsigned long)task.taskIdentifier);
+                NSLog(@"task:%lu",(unsigned long)task.taskIdentifier);
                 NSString * resopnse = [NSString stringWithFormat:@"%@",responseObject];
-                OKAY_LOG(@"str:%@", [ReplaceUnicode replaceUnicode:resopnse]);
+                NSLog(@"str:%@", [ReplaceUnicode replaceUnicode:resopnse]);
                 id resultMeta = [responseObject valueForKeyPath:@"meta"];
                 if (![resultMeta isEqual:[NSNull null]]) {
                     id error = [self handleResponse:resultMeta];
@@ -180,8 +182,8 @@
             break;
 
         case Post: {
-            OKAY_LOG(@"\n请求URL:\n%@%@", BASE_URL_VALUE,self.url);
-            OKAY_LOG(@"\n请求上行参数:%@",self.parameters);
+            NSLog(@"\n请求URL:\n%@%@", BASE_URL_VALUE,self.url);
+            NSLog(@"\n请求上行参数:%@",self.parameters);
             //字典转json字符串
             NSString * requestJsonStr = [self dictionaryToJson:(NSDictionary *)self.parameters];
             //gzip 压缩
@@ -197,9 +199,9 @@
             [manager POST:self.url parameters:cgzipdata progress:^(NSProgress * _Nonnull downloadProgress) {
                 Progress(downloadProgress);
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                 OKAY_LOG(@"task:%lu",(unsigned long)task.taskIdentifier);
+                 NSLog(@"task:%lu",(unsigned long)task.taskIdentifier);
                 NSString * resopnse = [NSString stringWithFormat:@"%@",responseObject];
-                OKAY_LOG(@"str:%@", [ReplaceUnicode replaceUnicode:resopnse]);
+                NSLog(@"str:%@", [ReplaceUnicode replaceUnicode:resopnse]);
                 id resultMeta = [responseObject valueForKeyPath:@"meta"];
                 if (![resultMeta isEqual:[NSNull null]]) {
                     id error = [self handleResponse:resultMeta];

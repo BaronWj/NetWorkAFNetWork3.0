@@ -7,12 +7,15 @@
 //
 
 #import "NSObject+Common.h"
-#import "MBProgressHUD.h"
-#import "ApiUrl.h"
+//#import "MBProgressHUD.h"
+//#import "ApiUrl.h"
 #import "DictTool.h"
 #import "AppDelegate.h"
-#import "EMIMHelper.h"
-#import "UserCacheManager.h"
+//#import "EMIMHelper.h"
+//#import "UserCacheManager.h"
+
+//app err code
+#define okEducation_Code_Base        @"https://okEducation.net/"
 @implementation NSObject (Common)
 #pragma mark NetError
 -(id)handleResponse:(id)responseJSON{
@@ -26,22 +29,22 @@
         error = [NSError errorWithDomain:okEducation_Code_Base code:resultCode.intValue userInfo:responseJSON];
 //        [self showError:error];
         
-        if((resultCode.intValue != APP_ERROR_VALIDATE_MANY_TIMES)
-           &&(resultCode.integerValue != APP_NETWORKSECURITY)
-           &&(resultCode.intValue != APP_ERROR_TOKEN_INVALID)
-           &&(resultCode.intValue != APP_ERROR_NOT_BIND_STUDENT)
-           ){
-            [self showHudTipStr:[responseJSON valueForKey:@"emsg"]];
-        }
-        
-        //根据错误码逻辑判断，如登录token失效
-        if (resultCode.intValue == APP_ERROR_TOKEN_INVALID) {
-            NSString * message = [DictTool getStringValue:(NSDictionary *)responseJSON  withKey:@"emsg"];
-            if (message.length == 0) {
-                message = @"登录状态已失效,请重新登录";
-            }
-            [self showAlert:message];
-        }
+//        if((resultCode.intValue != APP_ERROR_VALIDATE_MANY_TIMES)
+//           &&(resultCode.integerValue != APP_NETWORKSECURITY)
+//           &&(resultCode.intValue != APP_ERROR_TOKEN_INVALID)
+//           &&(resultCode.intValue != APP_ERROR_NOT_BIND_STUDENT)
+//           ){
+//            [self showHudTipStr:[responseJSON valueForKey:@"emsg"]];
+//        }
+//        
+//        //根据错误码逻辑判断，如登录token失效
+//        if (resultCode.intValue == APP_ERROR_TOKEN_INVALID) {
+//            NSString * message = [DictTool getStringValue:(NSDictionary *)responseJSON  withKey:@"emsg"];
+//            if (message.length == 0) {
+//                message = @"登录状态已失效,请重新登录";
+//            }
+//            [self showAlert:message];
+//        }
         
     }
     return error;
@@ -57,8 +60,8 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex == 0){
         //清除缓存
-        [[UserCacheManager defaultManager] clearUserCacheAndEditAccount];
-        [((AppDelegate *)[UIApplication sharedApplication].delegate) prepareRootController];
+//        [[UserCacheManager defaultManager] clearUserCacheAndEditAccount];
+//        [((AppDelegate *)[UIApplication sharedApplication].delegate) prepareRootController];
     }
 
 }
@@ -96,38 +99,38 @@
 //    }
     
     NSString *tipStr = [self tipFromError:error];
-    OKAY_LOG(@"error_____%@",tipStr);
-        if(error.code == APP_NETWORKFAILE){
-            tipStr = @"网络不给力";
-        }else if(error.code == APP_NETWOROUTTIME){
-            tipStr = @"网络请求超时";
-        }else if(error.code == APP_NETWORKUNFONDHOST){
-            tipStr = @"网络不给力";
-        }else if (error.code == APP_NSURLError_404){
-            tipStr = @"网络不给力";
-        }else{
-            tipStr = @"网络不给力";
-        }
-        [self showHudTipStr:tipStr];
+    NSLog(@"error_____%@",tipStr);
+//        if(error.code == APP_NETWORKFAILE){
+//            tipStr = @"网络不给力";
+//        }else if(error.code == APP_NETWOROUTTIME){
+//            tipStr = @"网络请求超时";
+//        }else if(error.code == APP_NETWORKUNFONDHOST){
+//            tipStr = @"网络不给力";
+//        }else if (error.code == APP_NSURLError_404){
+//            tipStr = @"网络不给力";
+//        }else{
+//            tipStr = @"网络不给力";
+//        }
+//        [self showHudTipStr:tipStr];
 
 }
 
 
 - (void)showHudTipStr:(NSString *)tipStr{
     if (tipStr && tipStr.length > 0) {
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-        hud.mode = MBProgressHUDModeText;
-        hud.labelText = tipStr;
-        hud.margin = 10.f;
-        if((kScreenHeight - 568)<0){
-            OKAY_LOG(@"DBL_EPSILON===************");
-            hud.yOffset = 110;
-        }else{
-            hud.yOffset = 150;
-        }
-        hud.yOffset += 100.f;
-        hud.removeFromSuperViewOnHide = YES;
-        [hud hide:YES afterDelay:2.0];
+//        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+//        hud.mode = MBProgressHUDModeText;
+//        hud.labelText = tipStr;
+//        hud.margin = 10.f;
+//        if((kScreenHeight - 568)<0){
+//            OKAY_LOG(@"DBL_EPSILON===************");
+//            hud.yOffset = 110;
+//        }else{
+//            hud.yOffset = 150;
+//        }
+//        hud.yOffset += 100.f;
+//        hud.removeFromSuperViewOnHide = YES;
+//        [hud hide:YES afterDelay:2.0];
     }
 }
 
